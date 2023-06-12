@@ -3,7 +3,7 @@ var key = localStorage.getItem("code");
 
 if (key == "secretKey") {
     alert("Already Log-in");
-    window.location.href = "home.html";
+    window.location.href = "index.html";
 } else {
     // window.location.href = "login.html";
 }
@@ -19,7 +19,7 @@ function login() {
 
     if (username == username1 && pass == pass1) {
         localStorage.setItem("code", "secretKey");
-        window.location.href = "home.html";
+        window.location.href = "index.html";
     }
     else {
         alert("Invalid Credentails, Try to Log-in again.");
