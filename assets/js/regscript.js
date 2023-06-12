@@ -3,7 +3,7 @@ var key = localStorage.getItem("code");
 
 if (key == "secretKey") {
     alert("Already Registered!");
-    window.location.href = "home.html";
+    window.location.href = "index.html";
 } else {
     // window.location.href = "register.html";
 }
