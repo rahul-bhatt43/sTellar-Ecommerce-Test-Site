@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register | sTellar</title>
+    <link rel="shortcut icon" href="favicon.svg" type="image/x-icon">
+    <link rel="stylesheet" href="./assets/css/logstyle.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="content">
+            <div class="image-box">
+                <img src="./assets/images/log-in.png" alt="">
+            </div>
+            <!-- <form action="login.html" method="POST"> -->
+            <form>
+                <div class="topic">Register</div>
+
+                <div class="input-box">
+                    <input type="text" id="username" required>
+                    <label for="username">Set Username</label>
+                </div>
+                <div class="input-box">
+                    <input type="email/text" id="email" required>
+                    <label for="email">Enter your Email</label>
+                </div>
+                <div class="input-box">
+                    <input type="password" id="password" required>
+                    <label for="password">Set your Password</label>
+                </div>
+
+                <div class="input-box">
+                    <input type="submit" onclick="signup()" id="register-in" value="Register">
+                </div>
+                <div class="formAnchor"><a href="login.html">Already have an account?</a></div>
+            </form>
+        </div>
+
+    </div>
+
+
+    <script src="./assets/js/regscript.js"></script>
+</body>
+
+</html>

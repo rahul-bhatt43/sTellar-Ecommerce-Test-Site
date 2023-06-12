@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reciept Generated | sTellar</title>
+    <link rel="shortcut icon" href="favicon.svg" type="image/x-icon">
+    <link rel="stylesheet" href="./assets/css/billstyle.css">
+    <script>
+        var randomnum = Math.floor(Math.random() * 100);
+        localStorage.setItem("recieptNum", randomnum);
+
+        function printDiv() {
+            var divContents = document.getElementById("Cart").innerHTML;
+            var a = window.open('', '', 'height=600, width=1200');
+            a.document.write('<html>');
+            // a.document.write('<body > <h1>Thanks for shoping <br>');
+            a.document.write(divContents);
+            a.document.write('</body></html>');
+            a.document.close();
+            a.print();
+        }
+    </script>
+</head>
+
+<body>
+    <div class="cartBox">
+        <div class="cart" id="Cart">
+
+            <div class="filter">
+
+                <h1><span>sTellar</span> Shoping</h1>
+                <p>Thanks for shoping with us!</p>
+
+            </div>
+            <table>
+                <tr>
+                    <th>Receipt No.</th>
+                    <th>Name/Username</th>
+                    <th>Items Purchased</th>
+                    <th>Ammount paid</th>
+                </tr>
+                <tr>
+                    <td>
+                        <script>document.write(localStorage.getItem("recieptNum"))</script>
+                    </td>
+                    <td>
+                        <script>document.write(localStorage.getItem("username1"))</script>
+                    </td>
+                    <td>
+                        <script>document.write(localStorage.getItem("itemsBrought"))</script>
+                    </td>
+                    <td>$
+                        <script>document.write(localStorage.getItem("cartTotal"))</script>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <button class="gotoCheckout" onclick="printDiv()">Print</button>
+
+    </div>
+</body>
+
+</html>
